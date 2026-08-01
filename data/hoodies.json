@@ -1,0 +1,256 @@
+[
+  {
+    "id": "hd-005",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Aether Cyber Hoodie",
+    "slug": "aether-cyber-hoodie",
+    "priceAUD": 99.95,
+    "offerPriceAUD": 69.95,
+    "discountPercent": 30,
+    "rating": 4.8,
+    "reviewCount": 142,
+    "badge": "HOT DROP",
+    "images": {
+      "front": "/Hoodie-Image Jun 10, 2026, 02_54_04 AM.png",
+      "back": "/Hoodie-Image Jun 10, 2026, 02_54_04 AM.png"
+    },
+    "description": "Futuristic oversized heavyweight hoodie featuring cyberpunk aesthetics and custom graphic prints.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colorway": "Cyber Black / Neon Blue"
+  },
+  {
+    "id": "hd-006",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Neo-Tokyo Synth Hoodie",
+    "slug": "neo-tokyo-synth-hoodie",
+    "priceAUD": 89.95,
+    "offerPriceAUD": 62.95,
+    "discountPercent": 30,
+    "rating": 4.7,
+    "reviewCount": 88,
+    "badge": "LIMITED",
+    "images": {
+      "front": "/Hoodie-Image Jun 10, 2026, 03_00_56 AM.png",
+      "back": "/Hoodie-Image Jun 10, 2026, 03_00_56 AM.png"
+    },
+    "description": "Ultra-comfortable, premium cotton hoodie displaying neon aesthetics from the streets of Tokyo.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colorway": "Obsidian Black / Pink"
+  },
+  {
+    "id": "hd-007",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Vanguard Tech Fleece",
+    "slug": "vanguard-tech-fleece",
+    "priceAUD": 94.95,
+    "offerPriceAUD": 66.95,
+    "discountPercent": 29,
+    "rating": 4.9,
+    "reviewCount": 75,
+    "badge": "NEW",
+    "images": {
+      "front": "/Hoodie-Image Jun 10, 2026, 03_04_24 AM.png",
+      "back": "/Hoodie-Image Jun 10, 2026, 03_04_24 AM.png"
+    },
+    "description": "A technical oversized fleece garment built for cold climates with weather-resistant texture.",
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colorway": "Concrete Grey / Teal"
+  },
+  {
+    "id": "hd-008",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Aegis Tactical Hoodie",
+    "slug": "aegis-tactical-hoodie",
+    "priceAUD": 99.95,
+    "offerPriceAUD": 69.95,
+    "discountPercent": 30,
+    "rating": 4.6,
+    "reviewCount": 52,
+    "badge": "ECO PRINT",
+    "images": {
+      "front": "/Hoodie-T Image Jun 10, 2026, 03_08_20 AM.png",
+      "back": "/Hoodie-T Image Jun 10, 2026, 03_08_20 AM.png"
+    },
+    "description": "Tactical streetwear hybrid hoodie with a high neck profile and modular utility aesthetic.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colorway": "Olive Drab / Black"
+  },
+  {
+    "id": "hd-009",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Spectral Kanji Hoodie",
+    "slug": "spectral-kanji-hoodie",
+    "priceAUD": 89.95,
+    "offerPriceAUD": 59.95,
+    "discountPercent": 33,
+    "rating": 4.8,
+    "reviewCount": 110,
+    "badge": "SELLING FAST",
+    "images": {
+      "front": "/Hooide-Image Jun 10, 2026, 03_16_20 AM.png",
+      "back": "/Hooide-Image Jun 10, 2026, 03_16_20 AM.png"
+    },
+    "description": "Striking kanji character prints on a high-density washed heavy fleece-lined hoodie.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colorway": "Ghost White / Purple"
+  },
+  {
+    "id": "hd-010",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Midnight Stealth Hoodie",
+    "slug": "midnight-stealth-hoodie",
+    "priceAUD": 104.95,
+    "offerPriceAUD": 74.95,
+    "discountPercent": 28,
+    "rating": 4.9,
+    "reviewCount": 204,
+    "badge": "TOP PICK",
+    "images": {
+      "front": "/Hoodie-Image Jun 10, 2026, 03_21_52 AM.png",
+      "back": "/Hoodie-Image Jun 10, 2026, 03_21_52 AM.png"
+    },
+    "description": "Signature blacked-out premium hoodie with subtle branding and double-lined hood for maximum structure.",
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colorway": "Triple Black / Stealth"
+  },
+  {
+    "id": "hd-001",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Ivory Clan Oversized Hoodie",
+    "slug": "ivory-clan-hoodie",
+    "priceAUD": 89.95,
+    "offerPriceAUD": 64.95,
+    "discountPercent": 28,
+    "rating": 4.9,
+    "reviewCount": 187,
+    "badge": "BESTSELLER",
+    "images": {
+      "front": "/02_ivory_red_4K_2304x4096.png",
+      "back": "/12_ivory_blue_4K_2304x4096.png"
+    },
+    "description": "Thick 400GSM fleece-lined oversized hoodie with crimson kanji embroidery.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colorway": "Ivory / Crimson"
+  },
+  {
+    "id": "hd-002",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Burgundy Ronin Heavy Hoodie",
+    "slug": "burgundy-ronin-hoodie",
+    "priceAUD": 94.95,
+    "offerPriceAUD": 69.95,
+    "discountPercent": 26,
+    "rating": 4.9,
+    "reviewCount": 408,
+    "badge": "TOP PICK",
+    "images": {
+      "front": "/05_burgundy_4K_2304x4096.png",
+      "back": "/17_washed_brown_4K_2304x4096.png"
+    },
+    "description": "Deep burgundy heavyweight fleece with embroidered samurai chest crest.",
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colorway": "Burgundy / Brown"
+  },
+  {
+    "id": "hd-003",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Sand Dune Cyber Hoodie",
+    "slug": "sand-dune-cyber-hoodie",
+    "priceAUD": 89.95,
+    "offerPriceAUD": 64.95,
+    "discountPercent": 28,
+    "rating": 4.7,
+    "reviewCount": 112,
+    "badge": "NEW DROP",
+    "images": {
+      "front": "/08_sand_beige_4K_2304x4096.png",
+      "back": "/10_brown_4K_2304x4096.png"
+    },
+    "description": "Minimal beige heavyweight fleece hoodie with dark contrast graphics.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colorway": "Sand / Earth"
+  },
+  {
+    "id": "hd-004",
+    "category": "hoodie",
+    "categoryLabel": "HOODIES & FLEECE",
+    "name": "Violet Void Tech Hoodie",
+    "slug": "violet-void-hoodie",
+    "priceAUD": 94.95,
+    "offerPriceAUD": 69.95,
+    "discountPercent": 26,
+    "rating": 4.8,
+    "reviewCount": 94,
+    "badge": "LIMITED",
+    "images": {
+      "front": "/09_purple_4K_2304x4096.png",
+      "back": "/16_violet_4K_2304x4096.png"
+    },
+    "description": "Deep purple heavy fleece hoodie with cyberpunk back print and thumbhole cuffs.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colorway": "Violet / Obsidian"
+  }
+]
