@@ -12,7 +12,7 @@ export default function Footer() {
               className="text-2xl sm:text-3xl font-black tracking-widest text-[#f8fafc]"
               style={{ fontFamily: "var(--font-orbitron)" }}
             >
-              ZENZ<span className="text-[#e63946]">.</span>
+              ZENJI<span className="text-[#e63946]">.</span>
             </span>
             <p className="text-xs text-[#64748b] leading-relaxed max-w-sm">
               Australian anime & gamer streetwear brand. High quality 240GSM drop shoulder tees and 400GSM fleece hoodies dispatched from Sydney.
@@ -85,10 +85,11 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-[#1f2430] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[#64748b]">
-          <p>© 2026 ZENZ Streetwear Pty Ltd. All rights reserved.</p>
+          <p>© 2026 ZENJI Streetwear Pty Ltd. All rights reserved.</p>
           <p>Designed & Dispatched in Sydney, Australia 🇦🇺</p>
         </div>
       </div>
     </footer>
   );
 }
+

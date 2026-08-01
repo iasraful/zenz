@@ -100,8 +100,8 @@ export default function CategorySlider({ id, title, subtitle, products }: Catego
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.3) }}
-              whileHover={{ y: -6 }}
-              className="w-[280px] sm:w-[320px] lg:w-[360px] shrink-0 bg-[#12151e] border border-[#1f2430] hover:border-[#e63946]/60 rounded-lg overflow-hidden group transition-all duration-300"
+              whileHover={{ y: -8 }}
+              className="w-[280px] sm:w-[320px] lg:w-[360px] shrink-0 bg-[#12151e] border border-[#1f2430] hover:border-[#e63946] rounded-lg overflow-hidden group transition-all duration-300 shadow-xl hover:shadow-[#e63946]/10"
             >
               {/* Image Container */}
               <div className="relative aspect-[3/4] bg-[#0a0e17] overflow-hidden">
@@ -109,7 +109,7 @@ export default function CategorySlider({ id, title, subtitle, products }: Catego
                   src={item.images.front}
                   alt={item.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
 
                 {/* Hover image preview */}
@@ -117,41 +117,52 @@ export default function CategorySlider({ id, title, subtitle, products }: Catego
                   src={item.images.back}
                   alt={`${item.name} back`}
                   fill
-                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                 />
 
                 {/* Badge */}
                 {item.badge && (
                   <span
-                    className="absolute top-4 left-4 px-3 py-1 bg-[#e63946] text-white text-[10px] font-bold tracking-wider rounded"
-                    style={{ fontFamily: "var(--font-orbitron)" }}
+                    className="absolute top-4 left-4 px-3 py-1 bg-[#e63946] text-white text-[10px] font-black tracking-wider uppercase"
+                    style={{ fontFamily: "var(--font-orbitron)", transform: "skewX(-10deg)" }}
                   >
-                    {item.badge}
+                    <span className="inline-block" style={{ transform: "skewX(10deg)" }}>
+                      {item.badge}
+                    </span>
                   </span>
                 )}
 
                 {/* Discount */}
                 <span
-                  className="absolute top-4 right-4 px-3 py-1 bg-[#12151e]/90 backdrop-blur-md text-[#e63946] border border-[#e63946]/40 text-[10px] font-bold tracking-wider rounded"
-                  style={{ fontFamily: "var(--font-orbitron)" }}
+                  className="absolute top-4 right-4 px-3 py-1 bg-[#12151e]/90 backdrop-blur-md text-[#e63946] border border-[#e63946]/40 text-[10px] font-black tracking-wider"
+                  style={{ fontFamily: "var(--font-orbitron)", transform: "skewX(-10deg)" }}
                 >
-                  -{item.discountPercent}% OFF
+                  <span className="inline-block" style={{ transform: "skewX(10deg)" }}>
+                    -{item.discountPercent}% OFF
+                  </span>
                 </span>
+
+                {/* Quick Add Overlay on Hover */}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                  <span className="px-5 py-2.5 bg-white text-black text-xs font-black tracking-widest uppercase" style={{ fontFamily: "var(--font-orbitron)", transform: "skewX(-8deg)" }}>
+                    <span className="inline-block" style={{ transform: "skewX(8deg)" }}>QUICK VIEW →</span>
+                  </span>
+                </div>
               </div>
 
               {/* Info */}
               <div className="p-5 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] text-[#e63946] font-bold uppercase tracking-wider">
+                  <span className="text-[10px] text-[#e63946] font-black uppercase tracking-widest">
                     {item.colorway}
                   </span>
                   <h3
-                    className="text-lg font-bold text-white mt-1 group-hover:text-[#e63946] transition-colors truncate"
+                    className="text-lg font-black text-white mt-1 group-hover:text-[#e63946] transition-colors truncate"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                   >
                     {item.name}
                   </h3>
-                  <p className="text-xs text-[#94a3b8] line-clamp-2 mt-2 leading-relaxed">
+                  <p className="text-xs text-[#94a3b8] line-clamp-2 mt-2 leading-relaxed font-medium">
                     {item.description}
                   </p>
                 </div>
@@ -164,13 +175,13 @@ export default function CategorySlider({ id, title, subtitle, products }: Catego
                     >
                       A${item.offerPriceAUD.toFixed(2)}
                     </span>
-                    <span className="text-xs text-[#64748b] line-through ml-2">
+                    <span className="text-xs text-[#64748b] line-through ml-2 font-medium">
                       A${item.priceAUD.toFixed(2)}
                     </span>
                   </div>
 
                   <button
-                    className="px-4 py-2 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-bold rounded transition-colors"
+                    className="px-4 py-2 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-black rounded transition-all duration-300 shadow-md shadow-[#e63946]/20 glow-hover"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                   >
                     ADD TO CART

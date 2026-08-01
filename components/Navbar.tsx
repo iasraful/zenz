@@ -13,7 +13,7 @@ export default function Navbar() {
         className="bg-[#e63946] text-[#ffffff] text-center text-xs py-1.5 font-bold tracking-widest uppercase"
         style={{ fontFamily: "var(--font-orbitron)" }}
       >
-        🇦🇺 FREE EXPRESS SHIPPING ON AU ORDERS OVER A$100 // DISPATCHED FROM SYDNEY
+        ⚡ FREE SHIPPING AUSTRALIA-WIDE ON ORDERS OVER A$150 • SEASON_01 LIVE ⚡
       </div>
 
       {/* Full-width container */}
@@ -25,7 +25,7 @@ export default function Navbar() {
               className="text-2xl sm:text-3xl font-black tracking-widest text-[#f8fafc] hover:text-[#e63946] transition-colors"
               style={{ fontFamily: "var(--font-orbitron)" }}
             >
-              ZENZ<span className="text-[#e63946]">.</span>
+              ZENJI<span className="text-[#e63946]">.</span>
             </span>
           </Link>
 
@@ -39,11 +39,11 @@ export default function Navbar() {
               DROP SHOULDERS
             </Link>
             <Link
-              href="#hoodies"
+              href="#customiser"
               className="text-xs font-bold tracking-widest text-[#94a3b8] hover:text-[#f8fafc] transition-colors uppercase"
               style={{ fontFamily: "var(--font-orbitron)" }}
             >
-              HOODIES & FLEECE
+              3D LAB
             </Link>
             <Link
               href="#manifesto"
@@ -53,7 +53,14 @@ export default function Navbar() {
               STUDIO SPOTLIGHT
             </Link>
             <Link
-              href="#why-zenz"
+              href="#hoodies"
+              className="text-xs font-bold tracking-widest text-[#94a3b8] hover:text-[#f8fafc] transition-colors uppercase"
+              style={{ fontFamily: "var(--font-orbitron)" }}
+            >
+              HOODIES
+            </Link>
+            <Link
+              href="#why-zenji"
               className="text-xs font-bold tracking-widest text-[#94a3b8] hover:text-[#f8fafc] transition-colors uppercase"
               style={{ fontFamily: "var(--font-orbitron)" }}
             >
@@ -65,7 +72,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="#drop-shoulders"
-              className="hidden sm:inline-flex items-center px-5 py-2.5 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-bold tracking-widest rounded transition-colors shadow-lg shadow-[#e63946]/20"
+              className="hidden sm:inline-flex items-center px-5 py-2.5 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-bold tracking-widest rounded transition-all duration-300 shadow-lg shadow-[#e63946]/20 glow-hover"
               style={{ fontFamily: "var(--font-orbitron)" }}
             >
               SHOP LATEST DROP
@@ -100,12 +107,12 @@ export default function Navbar() {
             DROP SHOULDERS
           </Link>
           <Link
-            href="#hoodies"
+            href="#customiser"
             onClick={() => setMobileMenuOpen(false)}
             className="block text-sm font-bold tracking-wider text-[#94a3b8] hover:text-white"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            HOODIES & FLEECE
+            3D LAB
           </Link>
           <Link
             href="#manifesto"
@@ -114,6 +121,14 @@ export default function Navbar() {
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
             STUDIO SPOTLIGHT
+          </Link>
+          <Link
+            href="#hoodies"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block text-sm font-bold tracking-wider text-[#94a3b8] hover:text-white"
+            style={{ fontFamily: "var(--font-orbitron)" }}
+          >
+            HOODIES
           </Link>
           <Link
             href="#drop-shoulders"
@@ -128,3 +143,4 @@ export default function Navbar() {
     </header>
   );
 }
+

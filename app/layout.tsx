@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Orbitron, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -17,11 +18,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZENZ — Next-Gen Anime Streetwear | Australian Gamer Apparel",
+  title: "ZENJI — Premium Anime Streetwear | Limited Drops",
   description:
-    "Exclusive gamer anime streetwear designed in Australia. Premium 240GSM heavyweight cotton tees, hoodies, and drops. Fast AU-wide shipping. Limited edition releases.",
+    "Shop ZENJI's premium anime streetwear. Inspired by Naruto, Jujutsu Kaisen, and Japanese street culture. Premium 240GSM combed cotton tees and heavy fleece hoodies. Limited edition releases, no restocks.",
   keywords: [
     "anime streetwear",
+    "japanese streetwear",
+    "anime clothing australia",
     "gamer clothing",
     "australian streetwear",
     "anime tshirt",
@@ -29,17 +32,17 @@ export const metadata: Metadata = {
     "anime fashion australia",
   ],
   openGraph: {
-    title: "ZENZ — Next-Gen Anime Streetwear",
+    title: "ZENJI — Premium Anime Streetwear",
     description:
-      "Exclusive gamer anime streetwear designed in Australia. Premium drops, limited editions.",
+      "Exclusive anime streetwear designed in Australia. Premium drops, limited editions.",
     type: "website",
     locale: "en_AU",
     images: ["/thumbnil.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZENZ — Next-Gen Anime Streetwear",
-    description: "Exclusive gamer anime streetwear designed in Australia.",
+    title: "ZENJI — Premium Anime Streetwear",
+    description: "Exclusive anime streetwear designed in Australia.",
     images: ["/thumbnil.png"],
   },
 };
@@ -54,9 +57,12 @@ export default function RootLayout({
       lang="en-AU"
       className={`${orbitron.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="min-h-full flex flex-col antialiased">
-        {children}
+      <body className="min-h-full flex flex-col antialiased bg-[#08080c]">
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
 }
+

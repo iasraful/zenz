@@ -10,7 +10,7 @@ export default function ThumbnailBanner() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/thumbnil.png"
-          alt="ZENZ Sydney Studio Manifesto"
+          alt="ZENJI Sydney Studio Manifesto"
           fill
           className="object-cover object-center"
         />
@@ -36,8 +36,8 @@ export default function ThumbnailBanner() {
             THE <span className="text-[#e63946]">MANIFESTO</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-[#94a3b8] leading-relaxed">
-            ZENZ was founded in Sydney with one vision: bridge high-density anime art with premium 240GSM drop-shoulder streetwear. Heavyweight cotton, pre-shrunk builds, and zero cheap prints. Every drop is crafted in limited numbers.
+          <p className="text-sm sm:text-base text-[#94a3b8] leading-relaxed font-medium">
+            ZENJI was founded in Sydney with one vision: bridge high-density anime art with premium 240GSM drop-shoulder streetwear. Heavyweight cotton, pre-shrunk builds, and zero cheap prints. Every drop is crafted in strictly limited numbers. No restocks. Ever.
           </p>
 
           <div className="grid grid-cols-3 gap-6 pt-4 border-t border-[#1f2430]">
@@ -73,7 +73,7 @@ export default function ThumbnailBanner() {
           <div className="pt-4">
             <Link
               href="#drop-shoulders"
-              className="inline-block px-8 py-4 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-bold tracking-widest uppercase rounded transition-colors shadow-lg shadow-[#e63946]/30"
+              className="inline-block px-8 py-4 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-bold tracking-widest uppercase rounded transition-all duration-300 shadow-lg shadow-[#e63946]/30 glow-hover"
               style={{ fontFamily: "var(--font-orbitron)" }}
             >
               EXPLORE FEATURED DROPS
@@ -84,3 +84,4 @@ export default function ThumbnailBanner() {
     </section>
   );
 }
+

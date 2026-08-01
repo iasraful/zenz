@@ -1,19 +1,19 @@
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
 import CategorySlider from "@/components/CategorySlider";
+import ShirtViewerClient from "@/components/ShirtViewerClient";
 import ThumbnailBanner from "@/components/ThumbnailBanner";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import SocialProof from "@/components/SocialProof";
 import Footer from "@/components/Footer";
 import products from "@/data/products.json";
-import hoodies from "@/data/products.json";
 
 export default function HomePage() {
   const dropShoulders = products.filter((p) => p.category === "drop-shoulder");
-  const hoodiesProducts = hoodies.filter((p) => p.category === "hoodie");
+  const hoodiesProducts = products.filter((p) => p.category === "hoodie");
 
   return (
-    <main className="min-h-screen bg-[#0a0e17] text-[#f8fafc]">
+    <main className="min-h-screen bg-[#08080c] text-[#f8fafc]">
       {/* Navbar */}
       <Navbar />
 
@@ -28,14 +28,17 @@ export default function HomePage() {
         products={dropShoulders}
       />
 
-      {/* Featured Spotlight Banner using /thumbnil.png */}
+      {/* 3D Interactive Lab */}
+      {/* <ShirtViewerClient /> */}
+
+      {/* Featured Spotlight Banner */}
       <ThumbnailBanner />
 
       {/* Hoodies & Fleece Slider */}
       <CategorySlider
         id="hoodies"
         title="HOODIES & FLEECE"
-        subtitle="Ultra-thick fleece-lined hoodies designed for gaming & winter streetwear."
+        subtitle="Ultra-thick 400GSM fleece-lined hoodies designed for winter comfort."
         products={hoodiesProducts}
       />
 
@@ -50,3 +53,4 @@ export default function HomePage() {
     </main>
   );
 }
+

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function HeroVideo() {
   return (
@@ -23,42 +24,69 @@ export default function HeroVideo() {
 
       {/* Content */}
       <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl">
-        <span
+        <motion.span
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="inline-block px-3 py-1 bg-[#e63946]/20 border border-[#e63946]/50 text-[#e63946] text-xs font-bold tracking-widest uppercase mb-6"
           style={{ fontFamily: "var(--font-orbitron)" }}
         >
-          GAMER STREETWEAR // COLLECTION AW-26
-        </span>
+          ZENJI ANIME STREETWEAR // SEASON_01 COLLECTION
+        </motion.span>
 
-        <h1
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
           className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-white uppercase leading-none mb-6"
           style={{ fontFamily: "var(--font-orbitron)" }}
         >
-          NEXT-GEN <br />
-          <span className="text-[#e63946]">ANIME</span> STREETWEAR
-        </h1>
+          WEAR YOUR <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e63946] to-[#ffffff]">STORY</span>
+        </motion.h1>
 
-        <p className="max-w-xl text-sm sm:text-base text-[#94a3b8] leading-relaxed mb-10">
-          Heavyweight 240GSM cotton drops engineered for gaming culture & urban streetwear. Designed, stocked, and dispatched directly from Sydney, Australia.
-        </p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="max-w-xl text-sm sm:text-base text-[#94a3b8] leading-relaxed mb-10 font-medium"
+        >
+          Inspired by Japanese samurai discipline, iconic anime aesthetics, and modern street culture. Engineered with heavyweight 240GSM combed cotton in relaxed, oversized silhouettes. Dispatched from Sydney, Australia.
+        </motion.p>
 
-        <div className="flex flex-wrap items-center gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="flex flex-wrap items-center gap-4"
+        >
           <Link
             href="#drop-shoulders"
-            className="px-8 py-4 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-bold tracking-widest uppercase rounded transition-all shadow-xl shadow-[#e63946]/30"
+            className="px-8 py-4 bg-[#e63946] hover:bg-[#d90429] text-white text-xs font-bold tracking-widest uppercase rounded transition-all duration-300 shadow-xl shadow-[#e63946]/30 glow-hover"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
             SHOP DROP SHOULDERS
           </Link>
           <Link
-            href="#hoodies"
-            className="px-8 py-4 bg-[#12151e] hover:bg-[#1a1e2b] border border-[#1f2430] text-[#f8fafc] text-xs font-bold tracking-widest uppercase rounded transition-all"
+            href="#customiser"
+            className="px-8 py-4 bg-[#12151e] hover:bg-[#1a1e2b] border border-[#1f2430] text-[#f8fafc] text-xs font-bold tracking-widest uppercase rounded transition-all duration-300"
             style={{ fontFamily: "var(--font-orbitron)" }}
           >
-            EXPLORE HOODIES
+            ENTER 3D CUSTOM LAB
           </Link>
-        </div>
+        </motion.div>
+      </div>
+
+      {/* Animated Scroll Down Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
+        <span className="text-[10px] uppercase tracking-widest text-[#94a3b8]" style={{ fontFamily: "var(--font-orbitron)" }}>SCROLL</span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+          className="w-1.5 h-6 rounded-full bg-gradient-to-b from-[#e63946] to-transparent"
+        />
       </div>
     </section>
   );
 }
+
