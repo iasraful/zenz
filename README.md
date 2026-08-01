@@ -1,4 +1,4 @@
-# 👕 Zenz — Interactive 3D E-Commerce Showcase
+# 👕 Zenz — E-Commerce Showcase
 
 Welcome to **Zenz**, a premium e-commerce landing page and interactive showcase designed to give users an immersive, modern shopping experience. Featuring smooth interactive animations, responsiveness, and real-time 3D product previews.
 
