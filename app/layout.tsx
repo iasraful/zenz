@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
-import { Orbitron, JetBrains_Mono } from "next/font/google";
+import { Sora, Noto_Sans_JP, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const orbitron = Orbitron({
-  variable: "--font-orbitron",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains",
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-japanese",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "700", "900"],
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -55,9 +62,9 @@ export default function RootLayout({
   return (
     <html
       lang="en-AU"
-      className={`${orbitron.variable} ${jetbrainsMono.variable}`}
+      className={`${sora.variable} ${notoSansJP.variable} ${plusJakartaSans.variable}`}
     >
-      <body className="min-h-full flex flex-col antialiased bg-[#08080c]">
+      <body className="min-h-full flex flex-col antialiased bg-[var(--bg-base)] text-[var(--text-primary)]">
         <SmoothScroll>
           {children}
         </SmoothScroll>
@@ -65,4 +72,3 @@ export default function RootLayout({
     </html>
   );
 }
-

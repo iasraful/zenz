@@ -52,18 +52,18 @@ export default function ProductCard({ product, index }: ProductCardProps) {
       onHoverEnd={() => setHovered(false)}
       className="group relative flex flex-col rounded-none overflow-hidden cursor-pointer"
       style={{
-        background: "linear-gradient(135deg, #111827 0%, #0d1420 100%)",
+        background: "#ffffff",
         border: hovered
-          ? "1px solid rgba(6,182,212,0.6)"
-          : "1px solid rgba(30,41,59,0.8)",
+          ? "1px solid rgba(255,85,0,0.6)"
+          : "1px solid rgba(10,14,23,0.1)",
         boxShadow: hovered
-          ? "0 0 20px rgba(6,182,212,0.2), 0 0 40px rgba(6,182,212,0.08), inset 0 1px 0 rgba(6,182,212,0.1)"
-          : "0 4px 20px rgba(0,0,0,0.4)",
+          ? "0 0 24px rgba(255,85,0,0.18), 0 8px 32px rgba(10,14,23,0.1)"
+          : "0 2px 16px rgba(10,14,23,0.06)",
         transition: "border 0.3s ease, box-shadow 0.3s ease",
       }}
     >
       {/* ── Image Area ── */}
-      <div className="relative aspect-[3/4] overflow-hidden bg-[#0d1420]">
+      <div className="relative aspect-[3/4] overflow-hidden bg-[#f0ede8]">
         {/* Front Image */}
         <motion.div
           animate={{ opacity: hovered ? 0 : 1, scale: hovered ? 1.04 : 1 }}
@@ -95,28 +95,12 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           />
         </motion.div>
 
-        {/* Scan-line effect on hover */}
-        <AnimatePresence>
-          {hovered && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  "repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(6,182,212,0.03) 3px, rgba(6,182,212,0.03) 4px)",
-              }}
-            />
-          )}
-        </AnimatePresence>
-
-        {/* Cyber Cyan top-border glow on hover */}
+        {/* Top border reveal on hover */}
         <motion.div
           animate={{ scaleX: hovered ? 1 : 0 }}
-          className="absolute top-0 left-0 right-0 h-[2px] bg-[#06b6d4] origin-left"
+          className="absolute top-0 left-0 right-0 h-[2px] bg-[#ff5500] origin-left"
           transition={{ duration: 0.3 }}
-          style={{ boxShadow: "0 0 8px #06b6d4" }}
+          style={{ boxShadow: "0 0 8px rgba(255,85,0,0.6)" }}
         />
 
         {/* Badges */}
@@ -128,7 +112,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
               transition={{ delay: 0.2 }}
               className="inline-flex px-2.5 py-1 text-[9px] font-black tracking-[0.15em]"
               style={{
-                fontFamily: "var(--font-orbitron)",
+                fontFamily: "var(--font-accent)",
                 background:
                   product.badgeColor === "orange" ? "#ff5500" : "#06b6d4",
                 color: product.badgeColor === "orange" ? "#f8fafc" : "#0a0e17",
@@ -144,9 +128,9 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           {product.isNewDrop && !product.badge?.includes("NEW") && (
             <span
               className="inline-flex px-2.5 py-1 text-[9px] font-black tracking-[0.15em] bg-[#06b6d4] text-[#0a0e17]"
-              style={{ fontFamily: "var(--font-orbitron)" }}
+              style={{ fontFamily: "var(--font-accent)" }}
             >
-              NEW
+              NEW DROP
             </span>
           )}
         </div>
@@ -158,10 +142,10 @@ export default function ProductCard({ product, index }: ProductCardProps) {
             transition={{ duration: 0.2 }}
             className="flex items-center justify-center w-12 h-12 rounded-full font-black text-[10px] text-center leading-tight"
             style={{
-              fontFamily: "var(--font-orbitron)",
+              fontFamily: "var(--font-heading)",
               background: "linear-gradient(135deg, #ff5500 0%, #f59e0b 100%)",
               boxShadow: "0 0 15px rgba(255,85,0,0.4)",
-              color: "#f8fafc",
+              color: "#ffffff",
             }}
           >
             -{product.discountPercent}%
@@ -169,19 +153,19 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           </motion.div>
         </div>
 
-        {/* "HOVER TO FLIP" hint */}
+        {/* Hover-to-flip hint */}
         <AnimatePresence>
           {!hovered && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1 bg-[#0a0e17]/70 backdrop-blur-sm border border-[rgba(6,182,212,0.2)] rounded"
+              className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1 bg-white/80 backdrop-blur-sm border border-[rgba(10,14,23,0.12)] rounded"
             >
-              <svg className="w-3 h-3 text-[#06b6d4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 text-[#ff5500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
-              <span className="text-[8px] text-[#94a3b8] tracking-[0.1em]" style={{ fontFamily: "var(--font-orbitron)" }}>
+              <span className="text-[8px] text-[#475569] tracking-[0.1em]" style={{ fontFamily: "var(--font-accent)" }}>
                 HOVER TO FLIP
               </span>
             </motion.div>
@@ -190,12 +174,12 @@ export default function ProductCard({ product, index }: ProductCardProps) {
       </div>
 
       {/* ── Card Body ── */}
-      <div className="flex flex-col flex-1 p-4">
+      <div className="flex flex-col flex-1 p-4 bg-white">
         {/* Colorway tag */}
         <div className="flex items-center gap-2 mb-2">
           <span
-            className="text-[9px] tracking-[0.15em] text-[#06b6d4] uppercase"
-            style={{ fontFamily: "var(--font-jetbrains)" }}
+            className="text-[9px] tracking-[0.15em] text-[#06b6d4] uppercase font-bold"
+            style={{ fontFamily: "var(--font-accent)" }}
           >
             {product.colorway}
           </span>
@@ -203,8 +187,8 @@ export default function ProductCard({ product, index }: ProductCardProps) {
 
         {/* Product Name */}
         <h3
-          className="text-sm font-bold tracking-[0.05em] text-[#f8fafc] mb-2 group-hover:text-[#06b6d4] transition-colors duration-200 leading-snug"
-          style={{ fontFamily: "var(--font-orbitron)" }}
+          className="text-sm font-bold tracking-[0.04em] text-[#0a0e17] mb-2 group-hover:text-[#ff5500] transition-colors duration-200 leading-snug"
+          style={{ fontFamily: "var(--font-heading)" }}
         >
           {product.name}
         </h3>
@@ -217,7 +201,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                 key={s}
                 className="w-3 h-3"
                 fill={s <= Math.floor(product.rating) ? "#f59e0b" : "none"}
-                stroke={s <= Math.floor(product.rating) ? "#f59e0b" : "#475569"}
+                stroke={s <= Math.floor(product.rating) ? "#f59e0b" : "#d1d5db"}
                 viewBox="0 0 24 24"
               >
                 <path
@@ -231,7 +215,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           </div>
           <span
             className="text-[10px] text-[#94a3b8]"
-            style={{ fontFamily: "var(--font-jetbrains)" }}
+            style={{ fontFamily: "var(--font-body)" }}
           >
             {product.rating} ({product.reviewCount})
           </span>
@@ -240,20 +224,20 @@ export default function ProductCard({ product, index }: ProductCardProps) {
         {/* Price Block */}
         <div className="flex items-baseline gap-2 mb-4">
           <span
-            className="text-xl font-black text-[#f8fafc]"
-            style={{ fontFamily: "var(--font-orbitron)" }}
+            className="text-xl font-black text-[#0a0e17]"
+            style={{ fontFamily: "var(--font-body)" }}
           >
             A${product.offerPriceAUD.toFixed(2)}
           </span>
           <span
-            className="text-sm text-[#475569] line-through"
-            style={{ fontFamily: "var(--font-jetbrains)" }}
+            className="text-sm text-[#94a3b8] line-through"
+            style={{ fontFamily: "var(--font-body)" }}
           >
             A${product.priceAUD.toFixed(2)}
           </span>
           <span
             className="text-[10px] font-bold text-[#ff5500]"
-            style={{ fontFamily: "var(--font-orbitron)" }}
+            style={{ fontFamily: "var(--font-body)" }}
           >
             SAVE A${(product.priceAUD - product.offerPriceAUD).toFixed(2)}
           </span>
@@ -262,10 +246,10 @@ export default function ProductCard({ product, index }: ProductCardProps) {
         {/* Size Selector */}
         <div className="mb-4">
           <div
-            className="text-[8px] tracking-[0.2em] text-[#475569] mb-2 uppercase"
-            style={{ fontFamily: "var(--font-orbitron)" }}
+            className="text-[8px] tracking-[0.2em] text-[#94a3b8] mb-2 uppercase"
+            style={{ fontFamily: "var(--font-accent)" }}
           >
-            SIZE
+            SIZE // サイズ
           </div>
           <div className="flex flex-wrap gap-1.5">
             {product.sizes.map((size) => (
@@ -274,18 +258,18 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                 onClick={() => setSelectedSize(size)}
                 className="px-2.5 py-1 text-[9px] font-medium tracking-[0.1em] transition-all duration-200"
                 style={{
-                  fontFamily: "var(--font-orbitron)",
+                  fontFamily: "var(--font-accent)",
                   border:
                     selectedSize === size
-                      ? "1px solid #06b6d4"
-                      : "1px solid rgba(71,85,105,0.5)",
+                      ? "1px solid #ff5500"
+                      : "1px solid rgba(10,14,23,0.2)",
                   background:
-                    selectedSize === size ? "rgba(6,182,212,0.1)" : "transparent",
+                    selectedSize === size ? "rgba(255,85,0,0.08)" : "transparent",
                   color:
-                    selectedSize === size ? "#06b6d4" : "#94a3b8",
+                    selectedSize === size ? "#ff5500" : "#475569",
                   boxShadow:
                     selectedSize === size
-                      ? "0 0 8px rgba(6,182,212,0.2)"
+                      ? "0 0 8px rgba(255,85,0,0.2)"
                       : "none",
                 }}
               >
@@ -301,11 +285,11 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           whileTap={{ scale: 0.97 }}
           className="relative mt-auto w-full py-3 font-bold text-xs tracking-[0.15em] overflow-hidden transition-all duration-300"
           style={{
-            fontFamily: "var(--font-orbitron)",
+            fontFamily: "var(--font-heading)",
             background: addedToCart
               ? "linear-gradient(90deg, #06b6d4 0%, #0891b2 100%)"
               : "linear-gradient(90deg, #ff5500 0%, #f59e0b 100%)",
-            color: "#f8fafc",
+            color: "#ffffff",
             boxShadow: addedToCart
               ? "0 0 20px rgba(6,182,212,0.4)"
               : "0 0 20px rgba(255,85,0,0.3)",
@@ -323,7 +307,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
-                ADDED TO LOADOUT
+                ADDED TO CART
               </motion.span>
             ) : (
               <motion.span
@@ -336,7 +320,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
-                EQUIP NOW
+                ADD TO CART
               </motion.span>
             )}
           </AnimatePresence>
@@ -346,10 +330,10 @@ export default function ProductCard({ product, index }: ProductCardProps) {
       </div>
 
       {/* HUD corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 pointer-events-none" style={{ borderColor: hovered ? "#06b6d4" : "rgba(6,182,212,0.2)", transition: "border-color 0.3s" }} />
-      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 pointer-events-none" style={{ borderColor: hovered ? "#06b6d4" : "rgba(6,182,212,0.2)", transition: "border-color 0.3s" }} />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 pointer-events-none" style={{ borderColor: hovered ? "#ff5500" : "rgba(255,85,0,0.15)", transition: "border-color 0.3s" }} />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 pointer-events-none" style={{ borderColor: hovered ? "#ff5500" : "rgba(255,85,0,0.15)", transition: "border-color 0.3s" }} />
+      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 pointer-events-none" style={{ borderColor: hovered ? "#ff5500" : "rgba(255,85,0,0.2)", transition: "border-color 0.3s" }} />
+      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 pointer-events-none" style={{ borderColor: hovered ? "#ff5500" : "rgba(255,85,0,0.2)", transition: "border-color 0.3s" }} />
+      <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 pointer-events-none" style={{ borderColor: hovered ? "#06b6d4" : "rgba(6,182,212,0.2)", transition: "border-color 0.3s" }} />
+      <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 pointer-events-none" style={{ borderColor: hovered ? "#06b6d4" : "rgba(6,182,212,0.2)", transition: "border-color 0.3s" }} />
     </motion.article>
   );
 }

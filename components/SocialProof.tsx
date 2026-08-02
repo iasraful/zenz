@@ -23,18 +23,18 @@ const reviews = [
 
 export default function SocialProof() {
   return (
-    <section className="py-20 w-full bg-[#0a0d14] border-t border-[#1f2430]">
+    <section className="py-20 w-full bg-[#f5f3ef] border-t border-[rgba(10,14,23,0.08)]">
       <div className="w-full px-4 sm:px-8 lg:px-16 xl:px-24">
         <div className="text-center max-w-xl mx-auto mb-14">
           <span
-            className="text-xs font-bold text-[#e63946] tracking-widest uppercase"
-            style={{ fontFamily: "var(--font-orbitron)" }}
+            className="text-xs font-bold text-[#06b6d4] tracking-widest uppercase"
+            style={{ fontFamily: "var(--font-accent)" }}
           >
             COMMUNITY REVIEWS
           </span>
           <h2
-            className="text-3xl sm:text-4xl font-black text-white uppercase mt-1"
-            style={{ fontFamily: "var(--font-orbitron)" }}
+            className="text-3xl sm:text-4xl font-black text-[#0a0e17] uppercase mt-1"
+            style={{ fontFamily: "var(--font-heading)" }}
           >
             SQUAD REVIEWS (4.9/5 ★)
           </h2>
@@ -44,18 +44,33 @@ export default function SocialProof() {
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="p-8 bg-[#12151e] border border-[#1f2430] rounded-lg space-y-4 hover:border-[#e63946]/50 transition-colors shadow-lg hover:shadow-[#e63946]/5"
+              className="p-8 bg-white border border-[rgba(10,14,23,0.1)] rounded-lg space-y-4 hover:border-[#ff5500]/50 transition-colors shadow-md hover:shadow-[#ff5500]/5"
             >
               <div className="text-[#f59e0b] text-sm">★★★★★</div>
-              <p className="text-sm text-[#94a3b8] italic leading-relaxed font-medium">&ldquo;{rev.text}&rdquo;</p>
-              <div className="pt-4 border-t border-[#1f2430] flex items-center justify-between">
+              <p
+                className="text-sm text-[#475569] italic leading-relaxed"
+                style={{ fontFamily: "var(--font-body)" }}
+              >
+                &ldquo;{rev.text}&rdquo;
+              </p>
+              <div className="pt-4 border-t border-[rgba(10,14,23,0.08)] flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-black text-white block">{rev.name}</span>
-                  <span className="text-[10px] text-[#64748b] font-medium">{rev.location}</span>
+                  <span
+                    className="text-xs font-black text-[#0a0e17] block"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {rev.name}
+                  </span>
+                  <span
+                    className="text-[10px] text-[#94a3b8]"
+                    style={{ fontFamily: "var(--font-body)" }}
+                  >
+                    {rev.location}
+                  </span>
                 </div>
                 <span
-                  className="text-[10px] font-black text-[#e63946] uppercase"
-                  style={{ fontFamily: "var(--font-orbitron)" }}
+                  className="text-[10px] font-black text-[#ff5500] uppercase"
+                  style={{ fontFamily: "var(--font-accent)" }}
                 >
                   VERIFIED BUYER
                 </span>
@@ -67,4 +82,3 @@ export default function SocialProof() {
     </section>
   );
 }
-

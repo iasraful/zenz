@@ -1,21 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --bg-base: #08080c;
-  --bg-card: #12151e;
-  --bg-surface: #1a1e2b;
+@theme {
+  --font-heading: var(--font-sora), 'Sora', sans-serif;
+  --font-accent: var(--font-japanese), 'Noto Sans JP', sans-serif;
+  --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-body: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+}
 
-  --accent-crimson: #e63946;
-  --accent-red: #d90429;
+:root {
+  /* ── Backgrounds ── */
+  --bg-base: #f5f3ef;
+  --bg-card: #ffffff;
+  --bg-surface: #ede9e2;
+  --bg-dark: #0a0e17;
+  --bg-dark-card: #111827;
+  --bg-dark-surface: #1a2236;
+
+  /* ── Accent Colors ── */
   --accent-cyan: #06b6d4;
+  --accent-cyan-dark: #0891b2;
+  --accent-orange: #ff5500;
+  --accent-orange-light: #ff7733;
   --accent-gold: #f59e0b;
 
-  --text-primary: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
+  /* ── Text ── */
+  --text-primary: #0a0e17;
+  --text-secondary: #1e293b;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --text-light: #f8fafc;
+  --text-on-dark: #f8fafc;
 
-  --font-heading: var(--font-orbitron, 'Orbitron', sans-serif);
-  --font-body: var(--font-jetbrains, 'JetBrains Mono', monospace);
+  /* ── Font stacks ── */
+  --font-heading: var(--font-sora), 'Sora', sans-serif;
+  --font-accent: var(--font-japanese), 'Noto Sans JP', sans-serif;
+  --font-body: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+
+  /* ── Borders ── */
+  --border-light: rgba(10, 14, 23, 0.12);
+  --border-dark: rgba(255,255,255,0.08);
+  --border-cyan: rgba(6,182,212,0.4);
 }
 
 *, *::before, *::after {
@@ -35,7 +59,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Hide scrollbar for clean horizontal carousels */
+/* ── Scrollbar ── */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -44,40 +68,52 @@ body {
   scrollbar-width: none;
 }
 
-/* Font utilities */
+/* ── Font Utilities ── */
 .font-heading {
   font-family: var(--font-heading);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
 }
 
 .font-body {
   font-family: var(--font-body);
 }
 
+/* ── Selection ── */
 ::selection {
-  background-color: var(--accent-crimson);
+  background-color: var(--accent-cyan);
   color: #fff;
 }
 
-/* Custom Cyberpunk & Streetwear Aesthetics */
-.cyber-grid {
-  background-image: 
-    linear-gradient(to right, rgba(230, 57, 70, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(230, 57, 70, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* ── Streetwear grain texture for light sections ── */
+.grain {
+  position: relative;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
 }
 
-.ambient-glow {
-  filter: drop-shadow(0 0 15px rgba(230, 57, 70, 0.3));
-}
-
+/* ── Glow Hover ── */
 .glow-hover {
   transition: all 0.3s ease;
 }
 .glow-hover:hover {
-  box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 24px rgba(255, 85, 0, 0.45);
 }
 
+/* ── Cyan glow ── */
+.glow-cyan:hover {
+  box-shadow: 0 0 20px rgba(6,182,212,0.5);
+}
+
+/* ── Subtle scan line for dark card sections ── */
 @keyframes scanline {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(100%); }
@@ -90,8 +126,33 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(to bottom, transparent, rgba(230, 57, 70, 0.3), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(6,182,212,0.25), transparent);
   animation: scanline 6s linear infinite;
   pointer-events: none;
 }
 
+/* ── Light card styles ── */
+.card-light {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 20px rgba(10,14,23,0.06);
+}
+
+/* ── Dark section styling ── */
+.section-dark {
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
+}
+
+.section-light {
+  background: var(--bg-base);
+  color: var(--text-primary);
+}
+
+/* ── Accent tag badge ── */
+.badge-jp {
+  font-family: var(--font-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}

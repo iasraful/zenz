@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
 import CategorySlider from "@/components/CategorySlider";
-import ShirtViewerClient from "@/components/ShirtViewerClient";
 import ThumbnailBanner from "@/components/ThumbnailBanner";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import SocialProof from "@/components/SocialProof";
@@ -13,7 +12,7 @@ export default function HomePage() {
   const hoodiesProducts = products.filter((p) => p.category === "hoodie");
 
   return (
-    <main className="min-h-screen bg-[#08080c] text-[#f8fafc]">
+    <main className="min-h-screen bg-[#f5f3ef] text-[#0a0e17]">
       {/* Navbar */}
       <Navbar />
 
@@ -27,9 +26,6 @@ export default function HomePage() {
         subtitle="Heavyweight 240GSM combed cotton in relaxed oversized silhouettes."
         products={dropShoulders}
       />
-
-      {/* 3D Interactive Lab */}
-      {/* <ShirtViewerClient /> */}
 
       {/* Featured Spotlight Banner */}
       <ThumbnailBanner />
@@ -53,4 +49,3 @@ export default function HomePage() {
     </main>
   );
 }
-

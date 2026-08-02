@@ -25,18 +25,18 @@ const features = [
 
 export default function FeaturesGrid() {
   return (
-    <section id="why-zenji" className="py-20 w-full bg-[#08080c] border-t border-[#1f2430]">
+    <section id="why-zenji" className="py-20 w-full bg-[#0a0e17] border-t border-[rgba(255,255,255,0.06)]">
       <div className="w-full px-4 sm:px-8 lg:px-16 xl:px-24">
         <div className="text-center max-w-xl mx-auto mb-14">
           <span
-            className="text-xs font-bold text-[#e63946] tracking-widest uppercase"
-            style={{ fontFamily: "var(--font-orbitron)" }}
+            className="text-xs font-bold text-[#06b6d4] tracking-widest uppercase"
+            style={{ fontFamily: "var(--font-accent)" }}
           >
             OUR PROMISE
           </span>
           <h2
             className="text-3xl sm:text-4xl font-black text-white uppercase mt-1"
-            style={{ fontFamily: "var(--font-orbitron)" }}
+            style={{ fontFamily: "var(--font-heading)" }}
           >
             BUILT FOR THE OUTSIDERS
           </h2>
@@ -46,16 +46,19 @@ export default function FeaturesGrid() {
           {features.map((item, idx) => (
             <div
               key={idx}
-              className="p-8 bg-[#12151e] border border-[#1f2430] rounded-lg text-center space-y-4 hover:border-[#e63946]/50 transition-colors shadow-lg hover:shadow-[#e63946]/5"
+              className="p-8 bg-[#111827] border border-[rgba(255,255,255,0.06)] rounded-lg text-center space-y-3 hover:border-[#ff5500]/50 transition-all duration-300 shadow-lg hover:shadow-[#ff5500]/5 group"
             >
               <span className="text-4xl block mb-2">{item.icon}</span>
               <h3
-                className="text-base font-black text-white tracking-wider uppercase"
-                style={{ fontFamily: "var(--font-orbitron)" }}
+                className="text-base font-black text-white tracking-wider uppercase group-hover:text-[#ff5500] transition-colors"
+                style={{ fontFamily: "var(--font-heading)" }}
               >
                 {item.title}
               </h3>
-              <p className="text-xs text-[#94a3b8] leading-relaxed font-medium">
+              <p
+                className="text-xs text-[#64748b] leading-relaxed"
+                style={{ fontFamily: "var(--font-body)" }}
+              >
                 {item.description}
               </p>
             </div>
@@ -65,4 +68,3 @@ export default function FeaturesGrid() {
     </section>
   );
 }
-
