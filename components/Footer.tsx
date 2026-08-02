@@ -36,7 +36,7 @@ export default function Footer() {
               className="text-xs font-bold text-white tracking-widest uppercase mb-4"
               style={{ fontFamily: "var(--font-accent)" }}
             >
-              コレクション // COLLECTIONS
+              COLLECTIONS
             </h4>
             <ul className="space-y-2.5">
               <li>
@@ -63,7 +63,7 @@ export default function Footer() {
               className="text-xs font-bold text-white tracking-widest uppercase mb-4"
               style={{ fontFamily: "var(--font-accent)" }}
             >
-              カスタマーヘルプ // CUSTOMER HELP
+              CUSTOMER HELP
             </h4>
             <ul className="space-y-2.5">
               <li><a href="#" className="hover:text-[#ff5500] transition-colors" style={{ fontFamily: "var(--font-body)" }}>Shipping Policy (AU)</a></li>
@@ -78,7 +78,7 @@ export default function Footer() {
               className="text-xs font-bold text-white tracking-widest uppercase mb-4"
               style={{ fontFamily: "var(--font-accent)" }}
             >
-              限定ドロップ // VIP DROP DISPATCH
+              VIP DROP DISPATCH
             </h4>
             <p
               className="text-xs text-[#475569] mb-3"
