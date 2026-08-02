@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#0a0e17] border-t border-[rgba(255,255,255,0.06)] text-[#64748b] text-xs">
-      <div className="w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div className="w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
 
-          {/* Brand */}
-          <div className="space-y-4">
+          {/* Brand — full-width on mobile, spans 2 cols on sm so it sits above the link columns */}
+          <div className="space-y-4 sm:col-span-2 md:col-span-1">
             <span
               className="text-2xl sm:text-3xl font-black tracking-widest text-[#f8fafc]"
               style={{ fontFamily: "var(--font-heading)" }}
@@ -72,8 +72,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* VIP Drop */}
-          <div>
+          {/* VIP Drop — full-width on sm so the form never gets squished */}
+          <div className="sm:col-span-2 md:col-span-1">
             <h4
               className="text-xs font-bold text-white tracking-widest uppercase mb-4"
               style={{ fontFamily: "var(--font-accent)" }}
@@ -86,16 +86,16 @@ export default function Footer() {
             >
               Get notified 15 minutes before new drops launch.
             </p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
+            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col xs:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Enter your email..."
-                className="bg-[#111827] border border-[rgba(255,255,255,0.08)] text-white px-4 py-2.5 text-xs rounded flex-1 focus:outline-none focus:border-[#06b6d4] placeholder:text-[#475569]"
+                className="bg-[#111827] border border-[rgba(255,255,255,0.08)] text-white px-4 py-2.5 text-xs rounded w-full xs:flex-1 focus:outline-none focus:border-[#06b6d4] placeholder:text-[#475569]"
                 style={{ fontFamily: "var(--font-body)" }}
               />
               <button
                 type="submit"
-                className="bg-[#ff5500] text-white px-4 py-2.5 font-bold text-xs rounded hover:bg-[#e04a00] transition-colors"
+                className="bg-[#ff5500] text-white px-6 py-2.5 font-bold text-xs rounded hover:bg-[#e04a00] transition-colors whitespace-nowrap"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 JOIN
@@ -104,9 +104,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[#475569]">
+        <div className="pt-8 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-[#475569]">
           <p style={{ fontFamily: "var(--font-body)" }}>© 2026 ZENJI Streetwear Pty Ltd. All rights reserved.</p>
-          <p style={{ fontFamily: "var(--font-body)" }}>Designed &amp; Dispatched in Sydney, Australia 🇦🇺</p>
+          <p className="sm:text-right" style={{ fontFamily: "var(--font-body)" }}>Designed &amp; Dispatched in Sydney, Australia 🇦🇺</p>
         </div>
       </div>
     </footer>
